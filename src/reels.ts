@@ -11,7 +11,7 @@ export class Reels extends Container {
     this.reels = [];
     for (let i = 0; i < SLOT_REEL_COUNT; i++) {
       //   const texture = Texture.from("assets/1.png");
-      const reel = new Reel(container);
+      const reel = new Reel(container, i);
       reel.x = i * (SLOT_WIDTH / SLOT_REEL_COUNT);
       reel.y = 0;
       this.reels.push(reel);

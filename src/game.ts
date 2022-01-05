@@ -12,6 +12,9 @@ export const SLOT_REEL_COUNT = 5;
 export const SLOT_ICONS_PER_REEL_COUNT = 3;
 export const SLOT_ICON_COUNT = 7;
 
+export const REEL_ICON_HEIGHT = SLOT_HEIGHT / SLOT_ICONS_PER_REEL_COUNT;
+export const REEL_ICON_WIDTH = SLOT_WIDTH / SLOT_REEL_COUNT;
+
 export class Game {
   private app: Application;
 
