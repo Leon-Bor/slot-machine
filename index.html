@@ -2,7 +2,77 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Slot Machine</title>
+    <title>Slot Machine - BLH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/starback@2.0.1/dist/starback.js"></script>
+
+    <style>
+      .intro {
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #161616;
+        z-index: 1;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-direction: column;
+      }
+    </style>
   </head>
-  <body></body>
+
+  <body>
+    <div class="intro">
+      <div>
+        <svg
+          style="margin: auto; display: block; shape-rendering: auto"
+          width="60px"
+          height="60px"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid"
+        >
+          <path
+            fill="none"
+            stroke="#93dbe9"
+            stroke-width="8"
+            stroke-dasharray="42.76482137044271 42.76482137044271"
+            d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
+            stroke-linecap="round"
+            style="transform: scale(0.8); transform-origin: 50px 50px"
+          >
+            <animate
+              attributeName="stroke-dashoffset"
+              repeatCount="indefinite"
+              dur="1s"
+              keyTimes="0;1"
+              values="0;256.58892822265625"
+            ></animate>
+          </path>
+        </svg>
+
+        LOADING
+      </div>
+    </div>
+    <p>Developed by Leon Borlinghaus</p>
+    <a href="https://github.com/Leon-Bor/slot-machine" target="_blank">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m256 22.3341c127.3873 0 230.6551 103.2676 230.6551 230.6546 0 103.503-68.1728 191.0821-162.0654 220.2863l-3.5362.9093v-58.76q-.8976-11.0187-12.5662-26.8595 48.47-8.2652 70.46-28.2375 29.1712-30.3025 29.1715-79.2024v-16.9882q-2.244-20.2028-17.9513-45.2255-2.02 0-4.2639-4.3614 4.2639-13.5459 4.2639-24.1054v-2.755q-3.1419-33.9765-9.6491-33.976-22.6641 0-58.1186 24.1045-29.3959-7.1156-41.5132-7.1165h-30.2932q-7.1805 0-40.1668 7.1165-33.66-24.1046-59.465-24.1045-5.8342 8.9532-8.3028 35.354v2.9844q4.0393 21.12 4.0394 22.498-21.9911 29.8438-21.9908 63.5915 0 69.0995 49.8159 94.8123 15.9319 9.87 45.5521 14.2339h4.0392v2.754q-7.854 8.9532-13.688 29.6145a81.1934 81.1934 0 0 1 -27.601 4.3625h-1.5705q-20.196 0-41.2891-35.354-15.0344-12.8563-29.1712-12.8559l-6.9561 2.9844q0 3.9018 20.8687 22.4981 4.7126 5.5089 19.2979 35.3529 15.0343 15.6114 47.123 15.6119a121.726 121.726 0 0 1 19.2983-1.378l1.346 2.7551v25.77l-2.2577-.345c-105.1056-21.5073-184.17-114.505-184.17-225.9694 0-127.3869 103.2678-230.6545 230.6551-230.6545z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <span>Github</span>
+    </a>
+  </body>
 </html>

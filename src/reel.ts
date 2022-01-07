@@ -14,6 +14,8 @@ import {
   SLOT_ICONS_PER_REEL_COUNT,
   SLOT_ICON_COUNT,
   SLOT_ROLL_DELAY,
+  SLOT_ROLL_DELAY_VARIANCE,
+  SLOT_ROLL_TIME,
   SLOT_SPIN_SPEED,
 } from "./game";
 import { randomInt } from "crypto";
@@ -59,13 +61,27 @@ export class Reel extends Container {
       this.isSpinning = true;
       this.icons = [];
 
-      const DELAY_SPINS = Math.floor(
-        ((SLOT_ROLL_DELAY * this.reelIndex) / 1000) * 60
+      // spin speed based on settings
+      const MAX_ICONS_PER_SECOND =
+        (60 * SLOT_SPIN_SPEED) / REEL_ICON_HEIGHT - 3;
+
+      const MAX_ICONS_PER_ROLL_TIME = Math.floor(
+        (MAX_ICONS_PER_SECOND * SLOT_ROLL_TIME) / 1000
       );
-      console.log("DELAY_SPINS", DELAY_SPINS);
+
+      const DELAY_SPINS = Math.floor(
+        (MAX_ICONS_PER_SECOND * SLOT_ROLL_DELAY * this.reelIndex) / 1000
+      );
+
+      const VARIANCE_SPINS = Math.floor(
+        (MAX_ICONS_PER_SECOND * getRandomInt(1, SLOT_ROLL_DELAY_VARIANCE)) /
+          1000
+      );
 
       // prepare spin icons
-      const preSetReel = new Array(SLOT_ICONS_PER_REEL_COUNT + DELAY_SPINS)
+      const preSetReel = new Array(
+        MAX_ICONS_PER_ROLL_TIME + DELAY_SPINS + VARIANCE_SPINS
+      )
         .fill(0)
         .map(() => {
           return getRandomInt(1, SLOT_ICON_COUNT + 1);
@@ -73,12 +89,10 @@ export class Reel extends Container {
       finalIcons.map((f) => preSetReel.push(f));
       preSetReel.map((f, i) => this.addIcon(f, -i - 1));
 
-      // calc time with settings
+      // calc time with settings & icons
       const REEL_HEIGHT = preSetReel.length * REEL_ICON_HEIGHT;
-      console.log("REEL_HEIGHT", REEL_HEIGHT);
       const REEL_SPEED = SLOT_SPIN_SPEED;
       let THROLLE_SPEED = REEL_SPEED;
-      console.log("REEL_SPEED", REEL_SPEED);
 
       const START_TIME = Date.now();
 

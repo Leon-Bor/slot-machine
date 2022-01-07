@@ -45,6 +45,7 @@
     "wepack-cli": "^0.0.1-security"
   },
   "dependencies": {
+    "pixi-filters": "^4.1.5",
     "pixi.js": "^6.2.1"
   }
 }
