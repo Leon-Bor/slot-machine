@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . . 
 
-RUN npm install --production
+RUN npm install
 RUN npm run build:prod
 RUN npm prune --production 
 
