@@ -1,11 +1,13 @@
 FROM node:14-alpine As Builder 
-
+WORKDIR /app
 RUN npm install --production
 RUN npm run build:prod 
 RUN npm prune --production 
 
-FROM nginx:alpine 
+COPY . .
 
+FROM nginx:alpine 
+WORKDIR /app
 EXPOSE 80
 
 COPY ./dist /usr/share/nginx/html  
