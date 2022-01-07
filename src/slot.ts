@@ -23,7 +23,7 @@ export class Slot extends Container {
   isSpinning = false;
   credits = 1000;
   creditInput = 100;
-  autoSpin = true;
+  autoSpin = false;
 
   constructor(public container: Container) {
     super();
