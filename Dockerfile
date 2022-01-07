@@ -10,4 +10,4 @@ FROM nginx:alpine
 WORKDIR /app
 EXPOSE 80
 
-COPY ./dist /usr/share/nginx/html  
+COPY . /usr/share/nginx/html  
