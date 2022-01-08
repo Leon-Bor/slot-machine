@@ -23,12 +23,14 @@ const config = {
       directory: path.join(__dirname, "src"),
     },
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
     new CopyPlugin({
       patterns: [{ from: "src/assets", to: "assets" }],
+      patterns: [{ from: "favicon.ico", to: "favicon.ico" }],
     }),
   ],
   module: {

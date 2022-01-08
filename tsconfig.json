@@ -11,7 +11,11 @@
       "mini-signals": [
         "./node_modules/resource-loader/typings/mini-signals.d.ts"
       ]
-    }
+    },
+    "module": "commonjs"
   },
-  "files": ["src/index.ts"]
+  "files": ["src/index.ts"],
+  "jest": {
+    "setupFiles": ["./__setups__/other.js", "jest-canvas-mock"]
+  }
 }
