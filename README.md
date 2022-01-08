@@ -2,7 +2,7 @@
 
 ![alt text](https://raw.githubusercontent.com/Leon-Bor/slot-machine/main/src/assets/logo.png)
 
-To start the slot machine run the following command and go to `localhost:8080`
+To start the slot machine run the following commands and go to `localhost:8080`
 
 ```
 npm i
