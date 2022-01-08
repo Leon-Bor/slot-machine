@@ -29,8 +29,10 @@ const config = {
       template: "index.html",
     }),
     new CopyPlugin({
-      patterns: [{ from: "src/assets", to: "assets" }],
-      patterns: [{ from: "favicon.ico", to: "favicon.ico" }],
+      patterns: [
+        { from: "src/assets", to: "assets" },
+        { from: "favicon.ico", to: "favicon.ico" },
+      ],
     }),
   ],
   module: {
