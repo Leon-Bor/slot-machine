@@ -123,11 +123,11 @@ export class Reel extends Container {
   }
 
   bounceReel(): Promise<void> {
-    // todo: adapt bounce animation to spin speed and icon height
     return new Promise((resolve, reject) => {
       let BOUNCE_SPEED = 8;
       sounds.reelSpinEnd();
-
+      // todo: adapt bounce animation to spin speed and icon height
+      this.y = this.height - SLOT_HEIGHT + 20;
       this.bounceAnmation = async () => {
         if (this.y > this.height - SLOT_HEIGHT) {
           this.y -= BOUNCE_SPEED;
