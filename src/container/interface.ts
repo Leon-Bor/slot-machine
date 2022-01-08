@@ -145,14 +145,14 @@ export class Interface extends Container {
   }
 
   showNoCreditsMessage() {
-    this.winAmount = new Text(`Game over!`, {
+    this.noCredits = new Text(`Game over!`, {
       fontFamily: "Arial",
       fontSize: 70,
       fill: 0xffffff,
       align: "center",
     });
 
-    this.winAmount.filters = [
+    this.noCredits.filters = [
       new DropShadowFilter({
         color: 0x000000,
         alpha: 1,
@@ -167,9 +167,15 @@ export class Interface extends Container {
       }),
     ];
 
-    this.winAmount.anchor.set(0.5);
-    this.winAmount.x = SLOT_WIDTH / 2;
-    this.winAmount.y = SLOT_HEIGHT / 2;
-    this.slotContainer.addChild(this.winAmount);
+    this.noCredits.anchor.set(0.5);
+    this.noCredits.x = SLOT_WIDTH / 2;
+    this.noCredits.y = SLOT_HEIGHT / 2;
+    this.slotContainer.addChild(this.noCredits);
+  }
+
+  hideNoCreditsMessage() {
+    if (this.noCredits) {
+      this.slotContainer.removeChild(this.noCredits);
+    }
   }
 }

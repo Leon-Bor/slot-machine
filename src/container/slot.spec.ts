@@ -8,6 +8,10 @@ import {
 } from "./game";
 import { Slot } from "./slot";
 
+window.HTMLMediaElement.prototype.load = () => {};
+window.HTMLMediaElement.prototype.play = async () => {};
+window.HTMLMediaElement.prototype.pause = () => {};
+
 describe("slot", () => {
   test("creating new slot", () => {
     const slot = new Slot(new Container());

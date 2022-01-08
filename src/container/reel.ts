@@ -1,11 +1,4 @@
-import {
-  Container,
-  ObservablePoint,
-  Point,
-  Sprite,
-  Texture,
-  Ticker,
-} from "pixi.js";
+import { Container, Sprite, Texture, Ticker } from "pixi.js";
 import { getRandomInt } from "../helper";
 import {
   REEL_ICON_HEIGHT,
@@ -18,7 +11,7 @@ import {
   SLOT_ROLL_TIME,
   SLOT_SPIN_SPEED,
 } from "./game";
-import { randomInt } from "crypto";
+import { sounds } from "../loader/sounds";
 
 export class Reel extends Container {
   icons: Sprite[] = [];
@@ -133,6 +126,8 @@ export class Reel extends Container {
     // todo: adapt bounce animation to spin speed and icon height
     return new Promise((resolve, reject) => {
       let BOUNCE_SPEED = 8;
+      sounds.reelSpinEnd();
+
       this.bounceAnmation = async () => {
         if (this.y > this.height - SLOT_HEIGHT) {
           this.y -= BOUNCE_SPEED;

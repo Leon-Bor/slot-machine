@@ -2,6 +2,10 @@ import { expect } from "@jest/globals";
 import { SLOT_ICONS_PER_REEL_COUNT } from "./game";
 import { Reel } from "./reel";
 
+window.HTMLMediaElement.prototype.load = () => {};
+window.HTMLMediaElement.prototype.play = async () => {};
+window.HTMLMediaElement.prototype.pause = () => {};
+
 describe("reel", () => {
   test("creating new reel ", () => {
     const reel = new Reel(0);

@@ -12,6 +12,7 @@ import { fakeApi } from "../helper";
 import { Reel } from "./reel";
 import { Interface } from "./interface";
 import { WinLines } from "./win-lines";
+import { sounds } from "../loader/sounds";
 
 export type Controls = {
   spin: Function;
@@ -28,6 +29,8 @@ export class Slot extends Container {
   constructor(public container: Container) {
     super();
 
+    sounds.theme();
+
     this.x = SLOT_MARGIN_LEFT_RIGHT / 2;
     this.y = SLOT_MARGIN_TOP_BOTTOM / 2;
 
@@ -37,7 +40,7 @@ export class Slot extends Container {
     }
     this.winLines = new WinLines(this);
 
-    // todo: use event emitter for interfce communication
+    // todo: use event emitter for interface communication
     this.interface = new Interface(container, this, {
       spin: this.spin.bind(this),
     });
@@ -85,6 +88,12 @@ export class Slot extends Container {
       return Promise.reject("Slot is already spinning");
     }
 
+    if (this.credits === 0) {
+      this.creditInput = 100;
+      await this.receiveCredits(1000);
+      this.interface.hideNoCreditsMessage();
+    }
+
     this.winLines.clear();
     const payAmount = await this.payCredits(this.creditInput);
 
@@ -106,6 +115,7 @@ export class Slot extends Container {
       this.winLines.drawWinLines(winLines);
       this.receiveCredits(winAmount);
       this.interface.showWinAmount(winAmount);
+      sounds.win();
 
       console.log(`You have won: ${winAmount} credits`);
     }
@@ -115,7 +125,12 @@ export class Slot extends Container {
     this.interface.onSpinDone();
 
     if (this.credits < this.creditInput) {
+      this.creditInput = this.credits;
+    }
+
+    if (this.credits === 0) {
       this.interface.showNoCreditsMessage();
+      sounds.gameover();
     }
 
     // todo: add auto spin button

@@ -31,6 +31,7 @@ const config = {
     new CopyPlugin({
       patterns: [
         { from: "src/assets", to: "assets" },
+        { from: "src/sounds", to: "sounds" },
         { from: "favicon.ico", to: "favicon.ico" },
       ],
     }),

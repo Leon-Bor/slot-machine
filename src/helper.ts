@@ -86,7 +86,7 @@ export const fakeApi = {
       chance.push(7);
     }
 
-    // fake request delay time
+    // fake request delay
     await timeout(100);
     return {
       matrix,
@@ -94,7 +94,7 @@ export const fakeApi = {
       winLines,
       winAmount: winLines.reduce((cur, line) => {
         const firstIcon = rotatedMatrix[line[0]][0];
-        return cur + firstIcon * payAmount * 0.9;
+        return Math.round(cur + firstIcon * payAmount * 0.75);
       }, 0),
     };
   },
