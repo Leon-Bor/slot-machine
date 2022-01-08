@@ -55,6 +55,6 @@ There are a couple of possible configurations you can make in `src/container/gam
 
 
 
-## Win
+## How to win
 
 <img src="https://raw.githubusercontent.com/Leon-Bor/slot-machine/main/src/assets/screenshot2.png" width=70% height=70%>
