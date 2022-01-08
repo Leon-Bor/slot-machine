@@ -93,7 +93,6 @@ export const fakeApi = {
       win: !!winLines.length,
       winLines,
       winAmount: winLines.reduce((cur, line) => {
-        console.log(line);
         const firstIcon = rotatedMatrix[line[0]][0];
         return cur + firstIcon * payAmount * 0.9;
       }, 0),

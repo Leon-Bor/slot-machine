@@ -7,5 +7,6 @@ const config: Config.InitialOptions = {
     "^.+\\.ts?$": "ts-jest",
   },
   maxWorkers: 1,
+  setupFiles: ["jest-canvas-mock"],
 };
 export default config;

@@ -10,7 +10,7 @@
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
     "serve": "webpack serve",
-    "test:unit": "jest --verbose ./src",
+    "test:unit": "jest --verbose ./src --watchAll",
     "test:func": "npm run start & $(npm bin)/cypress open"
   },
   "repository": {
@@ -30,13 +30,17 @@
     "@types/pixi.js": "^5.0.0",
     "@types/webpack": "^5.28.0",
     "@webpack-cli/generators": "^2.4.1",
+    "chai": "^4.3.4",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
+    "cypress": "^9.2.0",
     "declaration-bundler-webpack-plugin": "^1.0.3",
     "electron": "^13.6.6",
     "floss": "^5.0.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
+    "jest-canvas-mock": "^2.3.1",
     "prettier": "^2.5.1",
     "sass": "^1.45.2",
     "sass-loader": "^12.4.0",
@@ -46,10 +50,7 @@
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.2",
-    "wepack-cli": "^0.0.1-security",
-    "chai": "^4.3.4",
-    "cypress": "^9.2.0",
-    "jest": "^27.4.7"
+    "wepack-cli": "^0.0.1-security"
   },
   "dependencies": {
     "pixi-filters": "^4.1.5",

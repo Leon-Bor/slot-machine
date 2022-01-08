@@ -1,4 +1,5 @@
 import { getRandomInt, rotateMatrixLeft, rotateMatrixRight } from "./helper";
+import { expect } from "@jest/globals";
 
 describe("Random function testing", () => {
   test("get a random one ", () => {

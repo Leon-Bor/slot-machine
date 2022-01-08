@@ -26,7 +26,7 @@ export class Assets extends Loader {
     });
 
     this.onComplete.add((a) => {
-      console.log("assets loaded");
+      console.log("Assets loaded.");
     });
 
     this.load();

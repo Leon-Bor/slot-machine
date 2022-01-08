@@ -1,5 +1,6 @@
 import { Game } from "./container/game";
 import "./styles.scss";
+
 window.onload = function () {
   const onLoaded = () => {
     const intro = document.getElementsByClassName("intro")?.[0];
@@ -9,8 +10,4 @@ window.onload = function () {
   };
 
   new Game(onLoaded);
-
-  setTimeout(() => {
-    const ctx = document.getElementsByTagName("canvas")[0].getContext("2d");
-  }, 1000);
 };

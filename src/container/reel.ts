@@ -56,6 +56,9 @@ export class Reel extends Container {
     if (this.isSpinning) {
       return Promise.reject("Reel is already spinning");
     }
+    if (finalIcons.length != SLOT_ICONS_PER_REEL_COUNT) {
+      return Promise.reject("Wrong spin input length");
+    }
 
     return new Promise((resolve, reject) => {
       this.isSpinning = true;

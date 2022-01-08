@@ -31,6 +31,7 @@ export class Game {
     this.app = new Application({
       width: SLOT_WIDTH + SLOT_MARGIN_LEFT_RIGHT,
       height: SLOT_HEIGHT + SLOT_MARGIN_TOP_BOTTOM,
+      preserveDrawingBuffer: true,
     });
 
     this.assets = new Assets();
@@ -61,7 +62,6 @@ export class Game {
 
   keybinds() {
     document.addEventListener("keydown", (event) => {
-      console.log("keyyy");
       if (event.keyCode == 32) {
         this.spin();
         event.preventDefault();
