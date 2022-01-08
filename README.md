@@ -49,4 +49,4 @@ There are a couple of possible configurations you can make in `src/container/gam
 | `SLOT_SPIN_SPEED`           | How fast each reel spin. Higher values let more icons pass. Basically pixels per frame. |
 | `SLOT_REEL_COUNT`           | Number of reels in the slot machine.                                                    |
 | `SLOT_ICONS_PER_REEL_COUNT` | Number of vertical icons shown in each reel.                                            |
-| `SLOT_ICON_COUNT`           | Number of diffrent icons the slot machine has. Starts at `1`.                           |
+| `SLOT_ICON_COUNT`           | Number of diffrent icons in the slot machine. Starts at `1`. You need to provide the images in `src/assets` folder                          |
