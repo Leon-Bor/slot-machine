@@ -1,4 +1,4 @@
-# 🚀 Pixi.js slot machine written in typescript
+# 🚀 PixiJS slot machine written in typescript
 
  
 <img src="https://raw.githubusercontent.com/Leon-Bor/slot-machine/main/src/assets/screenshot.png" width=70% height=70%>
