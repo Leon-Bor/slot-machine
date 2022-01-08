@@ -1,6 +1,6 @@
 import { Application, Loader, Sprite } from "pixi.js";
 import { Slot } from "./slot";
-import { Assets } from "./assets";
+import { Assets } from "../loader/assets";
 
 export const SLOT_WIDTH = 720;
 export const SLOT_HEIGHT = 300;
@@ -22,14 +22,12 @@ export const REEL_ICON_HEIGHT = SLOT_HEIGHT / SLOT_ICONS_PER_REEL_COUNT;
 export const REEL_ICON_WIDTH = SLOT_WIDTH / SLOT_REEL_COUNT;
 export const REEL_WIDTH = SLOT_WIDTH / SLOT_REEL_COUNT;
 
-console.log("REEL_CIN", SLOT_HEIGHT, REEL_WIDTH);
-
 export class Game {
   private app: Application;
   private slot?: Slot;
   private assets: Loader;
 
-  public constructor(private onComplete: Function) {
+  public constructor(private onLoaded: Function) {
     this.app = new Application({
       width: SLOT_WIDTH + SLOT_MARGIN_LEFT_RIGHT,
       height: SLOT_HEIGHT + SLOT_MARGIN_TOP_BOTTOM,
@@ -38,11 +36,12 @@ export class Game {
     this.assets = new Assets();
     this.assets.onComplete.add(() => {
       this.init();
-      onComplete();
+      onLoaded();
     });
   }
 
   init() {
+    this.keybinds();
     this.slot = new Slot(this.app.stage);
     document.body.appendChild(this.app.view);
   }
@@ -51,5 +50,15 @@ export class Game {
     if (this.slot) {
       await this.slot.spin();
     }
+  }
+
+  keybinds() {
+    document.addEventListener("keydown", (event) => {
+      console.log("keyyy");
+      if (event.keyCode == 32) {
+        this.spin();
+        event.preventDefault();
+      }
+    });
   }
 }

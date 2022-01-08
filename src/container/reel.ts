@@ -6,7 +6,7 @@ import {
   Texture,
   Ticker,
 } from "pixi.js";
-import { getRandomInt } from "./helper";
+import { getRandomInt } from "../helper";
 import {
   REEL_ICON_HEIGHT,
   REEL_ICON_WIDTH,

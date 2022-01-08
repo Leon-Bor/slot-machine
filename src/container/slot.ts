@@ -8,7 +8,7 @@ import {
   SLOT_REEL_COUNT,
   SLOT_WIDTH,
 } from "./game";
-import { fakeApi } from "./helper";
+import { fakeApi } from "../helper";
 import { Reel } from "./reel";
 import { Interface } from "./interface";
 import { WinLines } from "./win-lines";
@@ -118,15 +118,15 @@ export class Slot extends Container {
       this.interface.showNoCreditsMessage();
     }
 
-    // todo: add auto spin
-    if (this.autoSpin) {
-      setTimeout(
-        () => {
-          this.spin();
-        },
-        win ? 1000 : 100
-      );
-    }
+    // todo: add auto spin button
+    // if (this.autoSpin) {
+    //   setTimeout(
+    //     () => {
+    //       this.spin();
+    //     },
+    //     win ? 1000 : 100
+    //   );
+    // }
   }
 
   async payCredits(amount: number) {

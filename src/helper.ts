@@ -3,7 +3,7 @@ import {
   SLOT_ICONS_PER_REEL_COUNT,
   SLOT_ICON_COUNT,
   SLOT_REEL_COUNT,
-} from "./game";
+} from "./container/game";
 
 export function getRandomInt(min: number, max: number) {
   min = Math.ceil(min);
@@ -94,9 +94,8 @@ export const fakeApi = {
       winLines,
       winAmount: winLines.reduce((cur, line) => {
         console.log(line);
-        const icon = matrix[line[0]][line[0]];
-        console.log("icon", icon);
-        return cur + icon * payAmount * 0.9;
+        const firstIcon = rotatedMatrix[line[0]][0];
+        return cur + firstIcon * payAmount * 0.9;
       }, 0),
     };
   },

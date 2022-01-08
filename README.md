@@ -1,6 +1,8 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Slot Machine!
 
-This project has been created using **webpack-cli**, you can now run
+![alt text](https://raw.githubusercontent.com/Leon-Bor/slot-machine/main/src/assets/logo.png)
+
+This project has been created using **webpack-cli**, you can now run.
 
 ```
 npm run build
