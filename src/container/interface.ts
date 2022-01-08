@@ -107,6 +107,10 @@ export class Interface extends Container {
     if (this.winAmount) {
       this.slotContainer.removeChild(this.winAmount);
     }
+
+    if (this.noCredits) {
+      this.slotContainer.removeChild(this.noCredits);
+    }
     this.addSpinButton(true);
   }
 
@@ -171,11 +175,5 @@ export class Interface extends Container {
     this.noCredits.x = SLOT_WIDTH / 2;
     this.noCredits.y = SLOT_HEIGHT / 2;
     this.slotContainer.addChild(this.noCredits);
-  }
-
-  hideNoCreditsMessage() {
-    if (this.noCredits) {
-      this.slotContainer.removeChild(this.noCredits);
-    }
   }
 }

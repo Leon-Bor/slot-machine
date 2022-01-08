@@ -88,10 +88,10 @@ export class Slot extends Container {
       return Promise.reject("Slot is already spinning");
     }
 
+    // reset credits if empty
     if (this.credits === 0) {
       this.creditInput = 100;
       await this.receiveCredits(1000);
-      this.interface.hideNoCreditsMessage();
     }
 
     this.winLines.clear();

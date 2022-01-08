@@ -88,9 +88,8 @@ export class Reel extends Container {
       // calc time with settings & icons
       const REEL_HEIGHT = preSetReel.length * REEL_ICON_HEIGHT;
       const REEL_SPEED = SLOT_SPIN_SPEED;
-      let THROLLE_SPEED = REEL_SPEED;
-
       const START_TIME = Date.now();
+      let THROLLE_SPEED = REEL_SPEED;
 
       this.animation = async () => {
         if (this.y + REEL_SPEED > REEL_HEIGHT) {

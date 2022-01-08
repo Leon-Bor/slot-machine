@@ -37,7 +37,7 @@ export class Game {
     this.assets = new Assets();
     this.assets.onComplete.add(() => {
       this.init();
-      onLoaded();
+      this.onLoaded();
     });
   }
 
@@ -46,7 +46,7 @@ export class Game {
     this.slot = new Slot(this.app.stage);
     document.body.appendChild(this.app.view);
 
-    // ? for debug only
+    // ? for dev only
     this.app.renderer.plugins.interaction.on("pointerup", (e: any) => {
       const x = e.data.global.x;
       const y = e.data.global.y;
