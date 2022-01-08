@@ -1,6 +1,9 @@
-# 🚀 Simple Slot Machine!
+# 🚀 Pixi.js slot machine in typescript
 
 ![alt text](https://raw.githubusercontent.com/Leon-Bor/slot-machine/main/src/assets/logo.png)
+
+## Demo
+https://slotmachine.blh.app
 
 ## Run the machine
 
@@ -33,7 +36,7 @@ docker run -d -p 8080:80 ghcr.io/leon-bor/slot-machine:latest
 
 There are a couple of possible configurations you can make in `src/container/game.ts`
 
-| Command                     | Description                                                                             |
+| const                     | Description                                                                             |
 | --------------------------- | --------------------------------------------------------------------------------------- |
 | `SLOT_WIDTH`                | Width of the slot machine.                                                              |
 | `SLOT_HEIGHT`               | Height of the slot machine.                                                             |
