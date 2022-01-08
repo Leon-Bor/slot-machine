@@ -2,16 +2,27 @@
 
 ![alt text](https://raw.githubusercontent.com/Leon-Bor/slot-machine/main/src/assets/logo.png)
 
-This project has been created using **webpack-cli**, you can now run.
+To start the slot machine run the following command and go to `localhost:8080`
 
 ```
-npm run build
+npm i
+npm start
 ```
 
-or
+To run unit tests
 
 ```
-yarn build
+npm run test:unit
 ```
 
-to bundle your application
+To run functional tests
+
+```
+npm run test:func
+```
+
+You can also use the latest docker image to run the slot maschine
+
+```
+docker run -d -p 8080:80 ghcr.io/leon-bor/slot-machine:latest
+```
