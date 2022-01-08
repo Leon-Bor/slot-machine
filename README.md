@@ -35,8 +35,8 @@ There are a couple of possible configurations you can make in `src/container/gam
 
 | Command                     | Description                                                                             |
 | --------------------------- | --------------------------------------------------------------------------------------- |
-| `SLOT_WIDTH`                | Width of the slot machine. Not the canvas!                                              |
-| `SLOT_HEIGHT`               | Height of the slot machine. Not the canvas!                                             |
+| `SLOT_WIDTH`                | Width of the slot machine.                                                              |
+| `SLOT_HEIGHT`               | Height of the slot machine.                                                             |
 | `SLOT_MARGIN_TOP_BOTTOM`    | Margin added to the top and bottom on the slot machine.                                 |
 | `SLOT_MARGIN_LEFT_RIGHT`    | Margin added to the left and right on the slot machine.                                 |
 | `SLOT_ROLL_TIME`            | Time each reel spins in `ms`.                                                           |
