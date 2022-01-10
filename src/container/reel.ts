@@ -10,7 +10,7 @@ import {
   SLOT_ROLL_DELAY_VARIANCE,
   SLOT_ROLL_TIME,
   SLOT_SPIN_SPEED,
-} from "./game";
+} from "../game";
 import { sounds } from "../loader/sounds";
 
 export class Reel extends Container {

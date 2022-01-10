@@ -5,7 +5,7 @@ import {
   SLOT_REEL_COUNT,
   SLOT_ROLL_DELAY,
   SLOT_ROLL_TIME,
-} from "./game";
+} from "../game";
 import { Slot } from "./slot";
 
 window.HTMLMediaElement.prototype.load = () => {};

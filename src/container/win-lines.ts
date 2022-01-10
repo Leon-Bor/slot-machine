@@ -13,7 +13,7 @@ import {
   SLOT_MARGIN_LEFT_RIGHT,
   SLOT_MARGIN_TOP_BOTTOM,
   SLOT_WIDTH,
-} from "./game";
+} from "../game";
 import { GlowFilter } from "pixi-filters";
 
 export class WinLines extends Container {

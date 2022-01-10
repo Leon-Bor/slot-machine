@@ -1,6 +1,6 @@
 import { Application, Loader, Sprite } from "pixi.js";
-import { Slot } from "./slot";
-import { Assets } from "../loader/assets";
+import { Slot } from "./container/slot";
+import { Assets } from "./loader/assets";
 
 export const SLOT_WIDTH = 720;
 export const SLOT_HEIGHT = 300;

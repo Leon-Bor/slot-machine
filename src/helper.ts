@@ -3,7 +3,7 @@ import {
   SLOT_ICONS_PER_REEL_COUNT,
   SLOT_ICON_COUNT,
   SLOT_REEL_COUNT,
-} from "./container/game";
+} from "./game";
 
 export function getRandomInt(min: number, max: number) {
   min = Math.ceil(min);

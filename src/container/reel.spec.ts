@@ -1,5 +1,5 @@
 import { expect } from "@jest/globals";
-import { SLOT_ICONS_PER_REEL_COUNT } from "./game";
+import { SLOT_ICONS_PER_REEL_COUNT } from "../game";
 import { Reel } from "./reel";
 
 window.HTMLMediaElement.prototype.load = () => {};
@@ -25,6 +25,8 @@ describe("reel", () => {
     const arr = new Array(SLOT_ICONS_PER_REEL_COUNT)
       .fill(0)
       .map((d, i) => i + 1);
+
+    console.log(arr);
     const res = await reel.spin(arr);
     expect(res.toString()).toBe(arr.reverse().toString()); // 3 + 1 icons
   });

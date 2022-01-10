@@ -7,7 +7,7 @@ import {
   SLOT_MARGIN_TOP_BOTTOM,
   SLOT_REEL_COUNT,
   SLOT_WIDTH,
-} from "./game";
+} from "../game";
 import { fakeApi } from "../helper";
 import { Reel } from "./reel";
 import { Interface } from "./interface";

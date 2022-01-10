@@ -1,5 +1,5 @@
 import { Loader } from "pixi.js";
-import { SLOT_ICON_COUNT } from "../container/game";
+import { SLOT_ICON_COUNT } from "../game";
 
 export class Assets extends Loader {
   constructor() {

@@ -5,7 +5,7 @@ import {
   SLOT_MARGIN_LEFT_RIGHT,
   SLOT_MARGIN_TOP_BOTTOM,
   SLOT_WIDTH,
-} from "./game";
+} from "../game";
 import { Controls } from "./slot";
 
 const LOGO_WIDTH = 720;

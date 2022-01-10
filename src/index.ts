@@ -1,4 +1,4 @@
-import { Game } from "./container/game";
+import { Game } from "./game";
 import "./styles.scss";
 
 window.onload = function () {
