@@ -35,7 +35,7 @@ docker run -d -p 8080:80 ghcr.io/leon-bor/slot-machine:latest
 
 ## Config
 
-There are a couple of possible configurations you can make in `src/container/game.ts`
+There are a couple of possible configurations you can make in `src/game.ts`
 
 
 
