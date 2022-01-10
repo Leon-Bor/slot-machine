@@ -18,7 +18,7 @@ export const sounds = {
   reelSpinEnd: () => {
     new Howl({
       src: ["sounds/reel-spin-end.mp3"],
-      volume: 5,
+      volume: 1,
     }).play();
   },
   gameover: () => {
